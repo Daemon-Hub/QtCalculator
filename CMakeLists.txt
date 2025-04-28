@@ -41,6 +41,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(DesktopApp
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        utils.h utils.cpp
+        money.h money.cpp money.ui
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET DesktopApp APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

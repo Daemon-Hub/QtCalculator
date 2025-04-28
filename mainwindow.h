@@ -17,24 +17,10 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+    friend void LengthAnalizer();
+    friend void SetLabelText();
+
 private slots:
-    // --------------------------------------- //
-
-    void ApplyOperation(const char op);
-    void LabelChange(const char& num);
-    void LengthAnalizer(bool* _l);
-    void LengthAnalizer();
-    void SetLabelText();
-    void Backspace();
-    void Perform();
-    void Strip();
-
-    bool DefaultLabelIsZero();
-    bool Find(std::string& str, const char& c);
-
-    const char* FormatLabel();
-
-    // --------------------------------------- //
 
     void on_b0_clicked();
 
@@ -73,6 +59,8 @@ private slots:
     void on_b_power_clicked();
 
     void on_b_div_clicked();
+
+    void on_b_sqrt_clicked();
 
 private:
     Ui::MainWindow *ui;
